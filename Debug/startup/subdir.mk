@@ -12,11 +12,5 @@ OBJS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 startup/%.o: ../startup/%.s
-	@echo 'Building file: $<'
-	@echo 'Invoking: MCU GCC Assembler'
-	@echo $(PWD)
-	arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"C:/Users/hvrsh/OneDrive/Desktop/FreeRTOS Workspace/STM32_LCD_Libraries/StdPeriph_Driver/inc" -I"C:/Users/hvrsh/OneDrive/Desktop/FreeRTOS Workspace/STM32_LCD_Libraries/inc" -I"C:/Users/hvrsh/OneDrive/Desktop/FreeRTOS Workspace/STM32_LCD_Libraries/CMSIS/device" -I"C:/Users/hvrsh/OneDrive/Desktop/FreeRTOS Workspace/STM32_LCD_Libraries/CMSIS/core" -g -o "$@" "$<"
-	@echo 'Finished building: $<'
-	@echo ' '
-
+	arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -I"C:/Users/hvrsh/Documents/MY_FILES/STM32_Projects/GIT_PROJECTS/STM32_LCD16x2_interface/StdPeriph_Driver/inc" -I"C:/Users/hvrsh/Documents/MY_FILES/STM32_Projects/GIT_PROJECTS/STM32_LCD16x2_interface/inc" -I"C:/Users/hvrsh/Documents/MY_FILES/STM32_Projects/GIT_PROJECTS/STM32_LCD16x2_interface/CMSIS/device" -I"C:/Users/hvrsh/Documents/MY_FILES/STM32_Projects/GIT_PROJECTS/STM32_LCD16x2_interface/CMSIS/core" -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@" "$<"
 

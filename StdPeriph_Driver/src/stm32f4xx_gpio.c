@@ -461,11 +461,11 @@ void GPIO_WriteBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, BitAction BitVal)
 
   if (BitVal != Bit_RESET)
   {
-    GPIOx->BSRRL = GPIO_Pin;
+	  GPIOx->ODR |= (0x1 << GPIO_Pin) ;
   }
   else
   {
-    GPIOx->BSRRH = GPIO_Pin ;
+	  GPIOx->ODR &= ~(0x1 << GPIO_Pin);
   }
 }
 

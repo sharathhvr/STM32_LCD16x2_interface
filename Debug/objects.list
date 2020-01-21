@@ -1,3 +1,4 @@
+"LCD16x2/LCD.o"
 "StdPeriph_Driver/src/misc.o"
 "StdPeriph_Driver/src/stm32f4xx_adc.o"
 "StdPeriph_Driver/src/stm32f4xx_can.o"
