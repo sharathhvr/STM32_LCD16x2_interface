@@ -460,13 +460,13 @@ void GPIO_WriteBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, BitAction BitVal)
   assert_param(IS_GPIO_BIT_ACTION(BitVal));
 
   if (BitVal != Bit_RESET)
-  {
-	  GPIOx->ODR |= (0x1 << GPIO_Pin) ;
-  }
-  else
-  {
-	  GPIOx->ODR &= ~(0x1 << GPIO_Pin);
-  }
+    {
+      GPIOx->BSRRL = GPIO_Pin;
+    }
+    else
+    {
+      GPIOx->BSRRH = GPIO_Pin ;
+    }
 }
 
 /**

@@ -6,10 +6,10 @@
 typedef struct
 {
 	GPIO_TypeDef* GPIO_Port; // Port number
-	uint8_t dataPin[8]; //data pin numbers config
-	uint8_t enablePin;  //enable pin number
-	uint8_t regSelectPin; //register select pin number
-	uint8_t readWritePin; // Read write Pin
+	uint16_t dataPin[8]; //data pin numbers config
+	uint16_t enablePin;  //enable pin number
+	uint16_t regSelectPin; //register select pin number
+	uint16_t readWritePin; // Read write Pin
 
 }LCD_PinConfig_t;
 
